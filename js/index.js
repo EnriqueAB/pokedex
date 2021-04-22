@@ -1,6 +1,32 @@
 
-document.querySelector("#registrar-btn").addEventListener("click",()=>{
-    let nombre = document.querySelector("#nombre-txt").value;
+tinymce.init({
+    selector: '#descripcion-txt',
+    height: 200,
+    menubar: false,
+    plugins: [
+      'advlist autolink lists link image charmap print preview anchor',
+      'searchreplace visualblocks code fullscreen',
+      'insertdatetime media table paste code help wordcount'
+    ],
+    toolbar: 'undo redo | formatselect | ' +
+    'bold italic backcolor | alignleft aligncenter ' +
+    'alignright alignjustify | bullist numlist outdent indent | ' +
+    'removeformat | help',
+    content_style: 'body { font-family:Helvetica,Arial,sans-serif; font-size:14px }'
+  });
 
-    alert("Hola Mundo!" + nombre);
+
+
+  
+document.querySelector("#registrar-btn").addEventListener("click",()=>{
+    //Value es para obtener el valor de los input de texto
+    let nombre = document.querySelector("#nombre-txt").value;
+    //Sacado de la pagina tinymce, para obtener lo escrito
+    let descripcion = tinymce.get("descripcion-txt").getContent();
+    //Cheked indica si el radiobutton esta seleccionado
+    let legendario = document.querySelector("#legendario-si").checked;
+    //El tipo se obtiene igual que los input
+    let tipo = document.querySelector("#tipo-select").value;
+
+    console.log("Hola Mundo " + nombre, descripcion, legendario, tipo);
 } );

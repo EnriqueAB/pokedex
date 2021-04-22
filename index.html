@@ -36,7 +36,7 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="descripcion-txt">Descripcion</label>
-                            <input class="form-control" type="text" id="descripcion-txt">
+                            <textarea id="descripcion-txt" cols="30" rows="10"></textarea>
                         </div>
                         <div class="mb-3">
                             <label for="legendario-rb">Legendario</label>
@@ -45,7 +45,7 @@
                                 <label for="legendario-si" class="form-check-label">Si</label>
                             </div>
                             <div class="form-check form-check-inline">
-                                <input type="radio" class="form-check-input" name="legendario-rb" id="legendario-no">
+                                <input type="radio" class="form-check-input" name="legendario-rb" id="legendario-no" checked>
                                 <label for="legendario-no" class="form-check-label">No</label>
                             </div>
                         </div>
@@ -116,6 +116,7 @@
     </main>
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+    <script src="vendor/tinymce/js/tinymce/tinymce.min.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>
